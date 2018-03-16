@@ -6,7 +6,7 @@
   <div *ngFor="let video of videos" class="card fadeIn fast">
     <img class="card-img-top puntero" [src]="video.thumbnails.high.url" alt="video.title">
     <div class="card-body">
-      <h5 class="card-title">{{video.title}}</h5>
+      <h5 class="card-title">{{video.title|slice:0:50}}...</h5>
       <button (click)="vervideo(video)" type="button" class="btn btn-outline-danger btn-block">
         Ver video
       </button>
